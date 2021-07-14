@@ -6,7 +6,7 @@ spec:
   selector:
     matchLabels:
       app: nginx
-  replicas: 2 
+  replicas: 1
   template:
     metadata:
       labels:
@@ -17,3 +17,24 @@ spec:
         image: nginx:alpine
         ports:
         - containerPort: 80
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: messaging
+  spec:
+  selector:
+    matchLabels:
+      app: reddis
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        tier: msg
+        app: reddis
+    spec:
+      containers:
+      - name: reddis
+        image: redis:alpine
+        ports:
+        - containerPort: 8080
