@@ -1,0 +1,16 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: redis-storage-raz
+  labels:
+    name: redis-storage-raz
+spec:
+  containers:
+  - name: redis-storage-raz
+    image: redis:alpine
+    volumeMounts:
+    - name: redis-storage-raz
+      mountPath: /data/redis
+  volumes:
+  - name: redis-storage-raz
