@@ -15,11 +15,3 @@ kubectl get pods -o json > /tmp/nodes-raz
 Question #5
 kubectl create deployment messaging --image redis:alpine --replicas=3
 kubectl expose deployment messaging --port=6379 --type=ClusterIP --name=messaging-service
-
-Question #6
-
-
-Question #7
-
-
-Question #8
