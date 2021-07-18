@@ -27,4 +27,5 @@ kubectl expose deployment messaging --port=6379 --type=ClusterIP --name=messagin
 
 
 
+
 **Deployments**
