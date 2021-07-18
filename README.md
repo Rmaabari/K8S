@@ -20,6 +20,7 @@ kubectl expose deployment messaging --port=6379 --type=ClusterIP --name=messagin
 **Pod Desgin Questions**
 
 1.kubectl get pods --show-labels
+
 2. kubectl apply -f deploy5-replicas.yml
 
 
